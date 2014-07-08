@@ -21,11 +21,11 @@ worker_processes 4
 
 # Help ensure your application will always spawn in the symlinked
 # "current" directory that Capistrano sets up.
-working_directory "/home/dexter/ME/bravoagency-rails-apps/DeployWithNginx" # available in 0.94.0+
+working_directory "/home/dexter/ME/DeployWithNginx" # available in 0.94.0+
 
 # listen on both a Unix domain socket and a TCP port,
 # we use a shorter backlog for quicker failover when busy
-listen "/home/dexter/ME/bravoagency-rails-apps/DeployWithNginx/tmp/sockets/.unicorn.sock", :backlog => 64
+listen "/home/dexter/ME/DeployWithNginx/tmp/sockets/.unicorn.sock", :backlog => 64
 listen 8080, :tcp_nopush => true
 
 # nuke workers after 30 seconds instead of 60 seconds (the default)
